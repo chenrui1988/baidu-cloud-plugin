@@ -20,13 +20,22 @@ buildscript {
     repositories {
         maven { url 'http://maven.oschina.net/content/groups/public/' }
     }
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.gradle.publish:plugin-publish-plugin:0.9.4"
+    }
 }
 
 group 'org.rapid.develop'
-version '1.0'
+version '1.1'
 
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: "com.gradle.plugin-publish"
 
 sourceCompatibility = 1.8
 
@@ -71,6 +80,19 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: uri('../repo'))
+        }
+    }
+}
+
+pluginBundle {
+    website = 'http://arui.me/index.php/archives/110/'
+    vcsUrl = 'https://github.com/chenrui1988/baidu-cloud-plugin'
+    description = 'Gradle plugin for Baidu Cloud Service'
+    tags = ['baidu', 'cloud', 'mapreduce', 'oss']
+    plugins {
+        baiduCloudPlugin {
+            id = 'org.rapid.develop.baidu-cloud-plugin'
+            displayName = 'Baidu Cloud Service Gradle plugin'
         }
     }
 }

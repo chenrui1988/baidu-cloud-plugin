@@ -7,6 +7,19 @@ Baidu 云服务Gradle 插件支持 发布文件到OSS 和创建百度Hadoop集�
 
 使用示例代码：
 ```CoffeeScript
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.org.rapid.develop:baidu-cloud-plugin:1.1"
+  }
+}
+
+apply plugin: "org.rapid.develop.baidu-cloud-plugin"
+
 model {
     baidu {
         accessKey = 'accessKey'
