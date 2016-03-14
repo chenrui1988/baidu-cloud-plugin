@@ -1,5 +1,7 @@
 ###Baidu 云服务Gradle 插件
 
+----
+ [![Apache License](http://img.shields.io/badge/license-apache2-orange.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
 
 基于Gradle 开发的便于开发基于Baidu云服务的程序，插件采用Gradle Rule Base Model 形式开发
 
