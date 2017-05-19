@@ -1,4 +1,4 @@
-###Baidu 云服务Gradle 插件
+### Baidu 云服务Gradle 插件
 
 ----
  [![Apache License](http://img.shields.io/badge/license-apache2-orange.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
